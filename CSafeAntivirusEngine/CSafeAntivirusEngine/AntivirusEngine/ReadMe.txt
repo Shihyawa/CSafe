@@ -1,2 +1,0 @@
-为了提高编译速度，提升更新效率，同时由于部分IDE不支持过长的字符串初始化列表，列表较长的启发式引擎将打包为DLL文件加载，使用的时候可以像没有DLL一样调用API，只需要在运行的时候在程序根目录放上DLL文件即可。(目前仅有LSProtect与BITProtect引擎采用该策略)
-P.S. 这两个引擎的API耦合性都很低，所以你可以将DLL版本手动改为.h头文件版本，就不需要加载DLL了，如果需要的话，可以进入BITProtect/LSProtect目录，然后把目录中的EngineHeadFile和当前目录下的同名文件夹合并(不会有文件冲突)，然后把目录中的BITProtect.h/LSProtect.h复制到当前目录(替换当前目录下的BITProtect.h/LSProtect.h)，再到你刚才复制的头文件中把_BITProtect/_LSProtect函数前面的下划线去掉即可
